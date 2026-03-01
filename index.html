@@ -142,8 +142,9 @@
         messageEl.classList.toggle("show");
       });
 
-      // typewriter effect for intro paragraphs
-      const paragraphs = document.querySelectorAll(".intro p");
+      // typewriter effect only for the first three intro paragraphs
+      const allParagraphs = Array.from(document.querySelectorAll(".intro p"));
+      const paragraphs = allParagraphs.slice(0, 3);
       paragraphs.forEach((p) => {
         const text = p.textContent.trim();
         p.textContent = "";

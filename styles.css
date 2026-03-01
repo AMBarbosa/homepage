@@ -75,6 +75,7 @@ p {
 .intro a:hover {
   color: darkorange;
 }
+
 /* click message on photo */
 .click-message {
   position: absolute;

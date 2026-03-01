@@ -10,7 +10,8 @@ body {
 
 body {
   color: light-dark(#333b3c, #efefec);
-  background-color: light-dark(#3a3732, #223a2c);
+  /* darker, tungsten-like grey instead of green */
+  background-color: light-dark(#3a3732, #2e2e2e);
 }
 
 /* particles container covers entire page */

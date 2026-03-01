@@ -141,6 +141,19 @@
       photoEl.addEventListener("click", () => {
         messageEl.classList.toggle("show");
       });
+
+      // typewriter effect for intro paragraphs
+      const paragraphs = document.querySelectorAll(".intro p");
+      paragraphs.forEach((p) => {
+        const text = p.textContent.trim();
+        p.textContent = "";
+        let idx = 0;
+        const interval = setInterval(() => {
+          p.textContent += text[idx];
+          idx += 1;
+          if (idx >= text.length) clearInterval(interval);
+        }, 50);
+      });
     </script>
   </body>
 </html>

@@ -1,12 +1,144 @@
 <!doctype html>
+
 <html>
   <head>
-    <title>A. Márcia Barbosa</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>AMBarbosa_homepage</title>
+    <!-- particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
+
   <body>
-    <h1>A. Márcia Barbosa</h1>
-    <p>Data analysis and maps.</p>
-    <p>Predictive species distribution models.</p>
-    <p>Biogeography solutions!</p>
+    <!-- particles container -->
+    <div id="particles-js"></div>
+
+    <div class="header">
+      <img src="photo.jpg" alt="My photo" class="profile-photo" />
+      <div id="click-message" class="click-message">Yeah, I love dogs!</div>
+      <div class="intro">
+        <h1>A. Márcia Barbosa</h1>
+        <p>Data analysis and maps.</p>
+        <p>Predictive species distribution models.</p>
+        <p>Biogeography solutions.</p>
+        <p>
+          <a
+            href="https://modtools.wordpress.com/barbosa/"
+            target="_blank"
+            rel="noopener"
+            >Homepage</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- footer with social links -->
+    <footer class="footer">
+      <a href="https://github.com/AMBarbosa" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://orcid.org/0000-0001-8972-7713"
+        target="_blank"
+        title="ORCID"
+      >
+        <i class="fab fa-orcid"></i>
+      </a>
+      <a
+        href="http://scholar.google.pt/citations?user=66awMnEAAAAJ"
+        target="_blank"
+        title="Google Scholar"
+      >
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a
+        href="http://www.researchgate.net/profile/A_Marcia_Barbosa/"
+        target="_blank"
+        title="ResearchGate"
+      >
+        <i class="fab fa-researchgate"></i>
+      </a>
+      <a
+        href="https://fosstodon.org/@ambarbosa"
+        target="_blank"
+        title="Mastodon"
+      >
+        <i class="fab fa-mastodon"></i>
+      </a>
+      <a
+        href="https://publons.com/researcher/383183/a-marcia-barbosa/"
+        target="_blank"
+        title="Web of Science"
+      >
+        <i class="fas fa-flask"></i>
+      </a>
+      <a
+        href="https://www.scopus.com/authid/detail.uri?authorId=18633430000"
+        target="_blank"
+        title="Scopus"
+      >
+        <i class="fas fa-book"></i>
+      </a>
+    </footer>
+
+    <!-- initialize particles -->
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 60, density: { enable: true, value_area: 800 } },
+          color: { value: "#23ad84" },
+          shape: {
+            type: "image",
+            image: {
+              src: "octopus.png",
+              width: 60,
+              height: 60,
+            },
+          },
+          opacity: { value: 0.5, random: false },
+          size: { value: 15, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#23ad84",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 200, line_linked: { opacity: 0.5 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+
+      // Toggle message on photo click
+      const photoEl = document.querySelector(".profile-photo");
+      const messageEl = document.querySelector("#click-message");
+
+      photoEl.addEventListener("click", () => {
+        messageEl.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
